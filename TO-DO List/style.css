@@ -1,0 +1,241 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&family=Rubik&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@500&family=Montserrat:wght@500&family=Rubik&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+div.head {
+    display: block;
+    width: 100%;
+    margin: 30px auto;
+    text-align: center;
+}
+
+.head p {
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 900;
+    font-size: 30px;
+    color: rgb(121, 29, 197);
+}
+
+.container {
+    display: block;
+    width: 70vw;
+    height: 470px;
+    box-shadow: 0 0 10px rgb(156, 149, 149);
+    margin: -10px auto;
+    border-radius: 5%;
+    background-color: yellow;
+}
+
+.container .to-do-list-container {
+    display: block;
+    margin: auto;
+    width: 98%;
+    height: 100%;
+    border: 1px solid yellow;
+    border-radius: 20px;
+}
+
+.container .to-do-list-container .head {
+    width: 100%;
+    margin-top: 7px;
+}
+
+.container .to-do-list-container div p {
+    font-size: 23px;
+    text-align: center;
+}
+
+.container .to-do-list-container .task-container {
+    margin-top: 40px;
+    padding: 0px 20px;
+    padding-right: 34px;
+}
+
+.container .to-do-list-container .task-container .task {
+    display: block;
+    width: 100%;
+    border-radius: 20px;
+    margin: 25px 0;
+}
+
+.container .to-do-list-container .task-container .task p {
+    display: block;
+    background-color: rgb(223, 76, 76);
+    height: 50px;
+    /* font-family: 'Montserrat', sans-serif; */
+    font-family: 'Dosis', sans-serif;
+    font-size: 1em;
+    font-weight: 500;
+    color: #fff;
+    text-align: left;
+    padding-left: 15px;
+    padding-top: 20px;
+    border-radius: 20px;
+}
+
+.container .to-do-list-container .task-container .task .fa {
+    float: right;
+    margin-top: 25px;
+    /* margin-right: 25px; */
+    margin-right: 25px;
+    /* appearance: none; */
+    color: #fff;
+}
+
+.container .to-do-list-container .task-container .task .task-checker {
+    float: right;
+    margin-top: 24px;
+    margin-right: -17px;
+    /* appearance: none; */
+    height: 1.2rem;
+    width: 1.2rem;
+    clip-path: circle(46% at 50% 50%);
+    color: black;
+}
+
+.container .to-do-list-container .task-container .task .task-checker:checked {
+    appearance: none;
+
+    /*clips the outside area and only within area is visible*/
+    /* clip-path: circle(50% at 50% 50%);  */
+    background-color: transparent;
+    z-index: -1;
+}
+
+.task-container #task1 .task-checker:checked~p {
+    text-decoration: line-through;
+    text-decoration-color: rgb(0, 0, 0);
+    text-decoration-thickness: 2px;
+    background-color: green;
+}
+
+.task-container #task2 .task-checker:checked~p {
+    text-decoration: line-through;
+    text-decoration-color: rgb(0, 0, 0);
+    text-decoration-thickness: 2px;
+    background-color: green;
+}
+
+.task-container #task3 .task-checker:checked~p {
+    text-decoration: line-through;
+    text-decoration-color: rgb(0, 0, 0);
+    text-decoration-thickness: 2px;
+    background-color: green;
+}
+
+.task-container #task4 .task-checker:checked~p {
+    text-decoration: line-through;
+    text-decoration-color: rgb(0, 0, 0);
+    text-decoration-thickness: 2px;
+    background-color: green;
+}
+
+/* ////////////////////////////////////////////////*/
+/* Media Query :: max-width: 750px */
+
+@media screen and (max-width: 750px) {
+    .container {
+        display: block;
+        width: 70vw;
+        height: 400px;
+        box-shadow: 0 0 10px rgb(156, 149, 149);
+        margin: -10px auto;
+        border-radius: 5%;
+        background-color: yellow;
+    }
+
+    .container .to-do-list-container {
+        width: 98%;
+        height: 100%;
+    }
+
+    .container .to-do-list-container div p {
+        font-size: 1.2rem;
+    }
+
+    .container .to-do-list-container .task-container {
+        margin-top: -12px;
+        padding: 0px 5%;
+    }
+
+    .container .to-do-list-container .task-container .task {
+        height: 60px;
+    }
+
+    .container .to-do-list-container .task-container .task p {
+        font-size: 0.7rem;
+        height: 40px;
+    }
+
+    .container .to-do-list-container .task-container .task .fa {
+        margin-top: 23px;
+        margin-right: 25px;
+    }
+
+    .container .to-do-list-container .task-container .task .task-checker {
+        margin-top: 23.2px;
+        margin-right: -14.3px;
+        height: 1rem;
+        width: 1rem;
+        clip-path: circle(43% at 50% 50%);
+    }
+}
+
+/* //////////////////////////////////////////////////////////////////// */
+/* Media Query :: max-width : 500px */
+
+@media screen and (max-width: 500px) {
+    @media screen and (max-width: 750px) {
+        .container {
+            display: block;
+            width: 70vw;
+            height: 485px;
+            box-shadow: 0 0 10px rgb(156, 149, 149);
+            margin: -10px auto;
+            border-radius: 5%;
+            background-color: yellow;
+            min-width: 250px;
+        }
+
+        .container .to-do-list-container {
+            width: 98%;
+            height: 100%;
+        }
+
+        .container .to-do-list-container div p {
+            font-size: 1.2rem;
+        }
+
+        .container .to-do-list-container .task-container {
+            margin-top: -12px;
+            padding: 0px 6%;
+        }
+
+        .container .to-do-list-container .task-container .task {
+            height: 80px;
+        }
+
+        .container .to-do-list-container .task-container .task p {
+            font-size: 0.7rem;
+            height: 70px;
+        }
+
+        .container .to-do-list-container .task-container .task .fa {
+            margin-top: 23px;
+            margin-right: 25px;
+        }
+
+        .container .to-do-list-container .task-container .task .task-checker {
+            margin-top: 23.2px;
+            margin-right: -14.3px;
+            height: 1rem;
+            width: 1rem;
+            clip-path: circle(43% at 50% 50%);
+        }
+    }
+}

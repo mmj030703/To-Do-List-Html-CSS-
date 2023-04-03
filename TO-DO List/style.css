@@ -53,7 +53,7 @@ div.head {
 .container .to-do-list-container .task-container {
     margin-top: 40px;
     padding: 0px 20px;
-    padding-right: 34px;
+    padding-right: 21px;
 }
 
 .container .to-do-list-container .task-container .task {
@@ -61,6 +61,7 @@ div.head {
     width: 100%;
     border-radius: 20px;
     margin: 25px 0;
+    position: relative;
 }
 
 .container .to-do-list-container .task-container .task p {
@@ -85,6 +86,7 @@ div.head {
     margin-right: 25px;
     /* appearance: none; */
     color: #fff;
+    z-index: 2;
 }
 
 .container .to-do-list-container .task-container .task .task-checker {
@@ -96,6 +98,7 @@ div.head {
     width: 1.2rem;
     clip-path: circle(46% at 50% 50%);
     color: black;
+    z-index: 2;
 }
 
 .container .to-do-list-container .task-container .task .task-checker:checked {
@@ -105,6 +108,34 @@ div.head {
     /* clip-path: circle(50% at 50% 50%);  */
     background-color: transparent;
     z-index: -1;
+}
+
+.container .to-do-list-container .task-container .task a.task-link1:focus~p {
+    text-decoration: line-through;
+    text-decoration-color: rgb(0, 0, 0);
+    text-decoration-thickness: 2px;
+    background-color: green;
+}
+
+.container .to-do-list-container .task-container .task a.task-link2:focus~p {
+    text-decoration: line-through;
+    text-decoration-color: rgb(0, 0, 0);
+    text-decoration-thickness: 2px;
+    background-color: green;
+}
+
+.container .to-do-list-container .task-container .task a.task-link3:focus~p {
+    text-decoration: line-through;
+    text-decoration-color: rgb(0, 0, 0);
+    text-decoration-thickness: 2px;
+    background-color: green;
+}
+
+.container .to-do-list-container .task-container .task a.task-link4:focus~p {
+    text-decoration: line-through;
+    text-decoration-color: rgb(0, 0, 0);
+    text-decoration-thickness: 2px;
+    background-color: green;
 }
 
 .task-container #task1 .task-checker:checked~p {
@@ -138,38 +169,42 @@ div.head {
 /* ////////////////////////////////////////////////*/
 /* Media Query :: max-width: 750px */
 
-@media screen and (max-width: 750px) {
+@media screen and (max-width: 750px)  {
+    body>div>p {
+        margin-top: 5px;
+        margin-bottom: -45px;
+    }
+
     .container {
-        display: block;
         width: 70vw;
-        height: 400px;
+        height: 500px;
         box-shadow: 0 0 10px rgb(156, 149, 149);
-        margin: -10px auto;
+        margin: 65px auto;
         border-radius: 5%;
         background-color: yellow;
     }
 
     .container .to-do-list-container {
         width: 98%;
-        height: 100%;
     }
 
     .container .to-do-list-container div p {
-        font-size: 1.2rem;
+        margin-top: 10px;
+        font-size: 1.5rem;
     }
 
     .container .to-do-list-container .task-container {
-        margin-top: -12px;
+        margin-top: -15px;
         padding: 0px 5%;
     }
 
     .container .to-do-list-container .task-container .task {
-        height: 60px;
+        height: 85px;
     }
 
     .container .to-do-list-container .task-container .task p {
-        font-size: 0.7rem;
-        height: 40px;
+        font-size: 1rem;
+        height: 72px;
     }
 
     .container .to-do-list-container .task-container .task .fa {
@@ -190,52 +225,53 @@ div.head {
 /* Media Query :: max-width : 500px */
 
 @media screen and (max-width: 500px) {
-    @media screen and (max-width: 750px) {
-        .container {
-            display: block;
-            width: 70vw;
-            height: 485px;
-            box-shadow: 0 0 10px rgb(156, 149, 149);
-            margin: -10px auto;
-            border-radius: 5%;
-            background-color: yellow;
-            min-width: 250px;
-        }
+    body > div > p {
+        margin-top: 30px;       
+    }
+    .container {
+        display: block;
+        width: 70vw;
+        height: 485px;
+        box-shadow: 0 0 10px rgb(156, 149, 149);
+        margin: -10px auto;
+        border-radius: 5%;
+        background-color: yellow;
+        min-width: 250px;
+        margin-top: 75px;
+    }
 
-        .container .to-do-list-container {
-            width: 98%;
-            height: 100%;
-        }
+    .container .to-do-list-container {
+        width: 98%;
+    }
 
-        .container .to-do-list-container div p {
-            font-size: 1.2rem;
-        }
+    .container .to-do-list-container div p {
+        font-size: 1.4rem;
+    }
 
-        .container .to-do-list-container .task-container {
-            margin-top: -12px;
-            padding: 0px 6%;
-        }
+    .container .to-do-list-container .task-container {
+        margin-top: -12px;
+        padding: 0px 6%;
+    }
 
-        .container .to-do-list-container .task-container .task {
-            height: 80px;
-        }
+    .container .to-do-list-container .task-container .task {
+        height: 80px;
+    }
 
-        .container .to-do-list-container .task-container .task p {
-            font-size: 0.7rem;
-            height: 70px;
-        }
+    .container .to-do-list-container .task-container .task p {
+        font-size: 0.9rem;
+        height: 70px;
+    }
 
-        .container .to-do-list-container .task-container .task .fa {
-            margin-top: 23px;
-            margin-right: 25px;
-        }
+    .container .to-do-list-container .task-container .task .fa {
+        margin-top: 23px;
+        margin-right: 25px;
+    }
 
-        .container .to-do-list-container .task-container .task .task-checker {
-            margin-top: 23.2px;
-            margin-right: -14.3px;
-            height: 1rem;
-            width: 1rem;
-            clip-path: circle(43% at 50% 50%);
-        }
+    .container .to-do-list-container .task-container .task .task-checker {
+        margin-top: 23.2px;
+        margin-right: -14.3px;
+        height: 1rem;
+        width: 1rem;
+        clip-path: circle(43% at 50% 50%);
     }
 }
